@@ -35,10 +35,14 @@ export default function Home() {
   const types = pokemon?.types;
   return (
     <Background>
-      {<h1 className="text-center my-2">Home</h1>}
+      {
+        <h1 className="text-center bg-success text-light p-3 col-5 my-2 mx-auto">
+          Home
+        </h1>
+      }
       <button
         onClick={generateID}
-        className="btn btn-success col-2 mx-auto my-4 px-5 py-3"
+        className="btn btn-success col-2 mx-auto my-2 px-5 py-3"
       >
         Get Pokemon
       </button>
@@ -52,13 +56,13 @@ export default function Home() {
         }}
         className="col-3 mx-auto bg-light text-dark p-5"
       >
-        {isLoading && <p>Loading..</p>}
+        {isLoading && MyContext.isLogin && <p>Loading..</p>}
         {!isLoading && MyContext.isLogin && (
           <div>
             <div className="mx-2 bg-success border border-dark rounded my-2 d-flex justify-content-center">
               <img
                 alt={name}
-                style={{ width: "90%", height: "auto" }}
+                style={{ width: "60%", height: "auto" }}
                 src={pokemon?.sprites.other["official-artwork"].front_default}
               ></img>
             </div>
