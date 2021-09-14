@@ -19,7 +19,7 @@ export default function Login() {
   }
   return (
     <div style={{ minHeight: "90vh" }} className="col-5 mx-auto my-5">
-      <h1 className="text-center">
+      <h1 className="text-center bg-success text-light p-3 col-5 my-5 mx-auto">
         {!MyContext.isLogin ? "Login" : "Successfully Logged in"}
       </h1>
       <form
